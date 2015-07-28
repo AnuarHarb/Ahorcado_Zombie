@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../Styles/styles.css">
+  <link rel="icon" type="image/png" href="../img/hand.png" sizes="64x64" />
+  <title>Ahorcado zombie</title>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href=""><img src="../img/zombie_Run.png"></a>
+      <p>Ahorcado Zombie</p>
+      <a href="http://www.devf.mx/"><img src="../img/dev.f.png"></a>
+    </nav>
+  </header>
+
+  <div id="main">
+    <div id="game">
+
+      <div id="contexto">
+        <h1>¡Estas atrapado!</h1>
+        <p>Tu eras de esas personas que se burlaba de los geeks o frikis que se preparaban para
+          estar listos cuando la infección zombie emergiera. ¡Pueras tonterias! Esa gente debería de usar su tiempo en
+          cosas reales, preocparse por la tasa de inflación, por el porcentaje de interes y el tipo cambiario, las subidad
+          en la bolsa o tan siquiera de la microeconomía ¡De seguro ni siquiera ven el futbol!. </p>
+        <p> Sí, así es como pensabas antes, y de hecho estabas en tu sillón viendo la final de futbol Pumas-America cuando
+          ¡El apocalipsis zombie comenzó! Se escucharon gritos de los vecinos, de seguro le iban al America y sufrían el gol
+          que les acababan de meter, "pobres nacos". Después, se fue la luz, justo cuando estaban enfocando a Cuahutemoc, gobernador
+           de Cuernavaca, viendo el partido, "Esos ineptos del gobierno no pueden cumplir ni con la luz, bola de inutiles". Pero
+          algo no estaba bien, los gritos no paraban y por la ventana se veía gente corriendo. Te asomaste para ver mejor. </p>
+        <p>Unos punks estaban haciendo destrosos por las calles, "Seguro es otra manifestación, que desperdicio de juventud tenemos
+          ahora." Pero algo estaba raro, ¡Uno de esos punks pandrosos se había lanzado sobre una señora y la estaba mordiendo!
+          "Maldito depravado, alguien debería ayudarla y darle una lección a ese malandrin, ¿donde esta la policía?, no puedo creer
+          que haya gente viendo eso y no haga nada, vamos bien México." </p>
+        <p>Alguien toca a tu puerta. ¿Quién podría ser? Miras por la mirilla y te das cuenta de que son tus vecinos de abajo y se
+          ven desesperados, les abres. Entran corriendo y detras de ellos viene uno de esos punks malandrines, se avalanza sobre el pequeño
+          Shaggy y ¡De una mordida le arranca un pedazo de pantorilla! ¡¿Qué esta pasando?!  </p>
+        <p>Sales corriendo por la escalera de incendios, "Shaggy, sus papás y su perro podrán arreglarselas solos", La calle es un caos, pero la
+           multitud aún esta a 2 cuadras de distancia, recuerdas que tienes las llaves de la camioneta de tus vecinos, quizas por eso venían
+            a tu departamento, que suerte que te las quedaste. Intentas entrar en la camioneta pero te das cuenta de que además de la
+            llave necesitas introduccir una contraseña, ¿Cuál podría ser? La multitud se acerca y no hay tiempo que perder ¡Vamos a descifrarla!</p>
+        <input id="comenzar" type="button" value="Comenzar a descifrar" onclick="juego()">
+      </div>
+
+      <div = id="imagenes">
+            <img id="panoramic" src="../img/panoramic.jpg">
+            <img id="van" src="../img/mystery_machine.png">
+            <img id="oldman" class="old" src="../img/oldman4.png">
+            <img id="oldman2" class="old" src="../img/oldman.png">
+            <img id="oldman3" class="old" src="../img/oldman3.png">
+            <img id="Scooby" src="../img/scooby_doo.png">
+            <img id="Etapa2" class="etapas" src="../img/zombies.png" >
+            <img id="Etapa4" class="etapas" src="../img/zombies2.png" >
+            <img id="Etapa6" class="etapas" src="../img/zombies.png" >
+            <img id="Etapa1" class="etapas" src="../img/zombie_policia.png" >
+            <img id="Etapa3" class="etapas" src="../img/zombie_snake.png" >
+            <img id="Etapa5" class="etapas" src="../img/zombie_walking.png" >
+            <img id="Etapa7" class="etapas" src="../img/zombie_jobs.png" >
+            <img id="Etapa8" class="etapas" src="../img/zombie_eating.png" >
+
+
+            <p id="mensaje" class="etapas">¡Te alcanzaron los zombies!</p>
+            <p id="mensaje2" class="etapas">¡Escapaste de los zombies!</p>
+      </div>
+
+      <div id="Palabra">
+
+      </div>
+
+      <table id="tabla">
+        <th colspan="13"><p></p>Tus opciones</p></th>
+          <tr>
+            <td><a class="abc" href=""><input id="a" class="abc" type="radio" name="letra" value="A" onclick="respuesta()"><h1>a</h1></a></td>
+            <td><a class="abc" href=""><input id="b" class="abc" type="radio" name="letra" value="B" onclick="respuesta()"><h1>b</h1></a></td>
+            <td><a class="abc" href=""><input id="c" class="abc" type="radio" name="letra" value="C" onclick="respuesta()"><h1>c</h1></a></td>
+            <td><a class="abc" href=""><input id="d" class="abc" type="radio" name="letra" value="D" onclick="respuesta()"><h1>d</h1></a></td>
+            <td><a class="abc" href=""><input id="e" class="abc" type="radio" name="letra" value="E" onclick="respuesta()"><h1>e</h1></a></td>
+            <td><a class="abc" href=""><input id="f" class="abc" type="radio" name="letra" value="F" onclick="respuesta()"><h1>f</h1></a></td>
+            <td><a class="abc" href=""><input id="g" class="abc" type="radio" name="letra" value="G" onclick="respuesta()"><h1>g</h1></a></td>
+            <td><a class="abc" href=""><input id="h" class="abc" type="radio" name="letra" value="H" onclick="respuesta()"><h1>h</h1></a></td>
+            <td><a class="abc" href=""><input id="i" class="abc" type="radio" name="letra" value="I" onclick="respuesta()"><h1>i</h1></a></td>
+            <td><a class="abc" href=""><input id="j" class="abc" type="radio" name="letra" value="J" onclick="respuesta()"><h1>j</h1></a></td>
+            <td><a class="abc" href=""><input id="k" class="abc" type="radio" name="letra" value="K" onclick="respuesta()"><h1>k</h1></a></td>
+            <td><a class="abc" href=""><input id="l" class="abc" type="radio" name="letra" value="L" onclick="respuesta()"><h1>l</h1></a></td>
+            <td><a class="abc" href=""><input id="m" class="abc" type="radio" name="letra" value="M" onclick="respuesta()"><h1>m</h1></a></td>
+          </tr>
+          <tr>
+            <td><a class="abc" href=""><input id="n" class="abc" type="radio" name="letra" value="N" onclick="respuesta()"><h1>n</h1></a></td>
+            <td><a class="abc" href=""><input id="o" class="abc" type="radio" name="letra" value="O" onclick="respuesta()"><h1>o</h1></a></td>
+            <td><a class="abc" href=""><input id="p" class="abc" type="radio" name="letra" value="P" onclick="respuesta()"><h1>p</h1></a></td>
+            <td><a class="abc" href=""><input id="q" class="abc" type="radio" name="letra" value="Q" onclick="respuesta()"><h1>q</h1></a></td>
+            <td><a class="abc" href=""><input id="r" class="abc" type="radio" name="letra" value="R" onclick="respuesta()"><h1>r</h1></a></td>
+            <td><a class="abc" href=""><input id="s" class="abc" type="radio" name="letra" value="S" onclick="respuesta()"><h1>s</h1></a></td>
+            <td><a class="abc" href=""><input id="t" class="abc" type="radio" name="letra" value="T" onclick="respuesta()"><h1>t</h1></a></td>
+            <td><a class="abc" href=""><input id="u" class="abc" type="radio" name="letra" value="U" onclick="respuesta()"><h1>u</h1></a></td>
+            <td><a class="abc" href=""><input id="v" class="abc" type="radio" name="letra" value="V" onclick="respuesta()"><h1>v</h1></a></td>
+            <td><a class="abc" href=""><input id="w" class="abc" type="radio" name="letra" value="W" onclick="respuesta()"><h1>w</h1></a></td>
+            <td><a class="abc" href=""><input id="y" class="abc" type="radio" name="letra" value="X" onclick="respuesta()"><h1>x</h1></a></td>
+            <td><a class="abc" href=""><input id="x" class="abc" type="radio" name="letra" value="Y" onclick="respuesta()"><h1>y</h1></a></td>
+            <td><a class="abc" href=""><input id="z" class="abc" type="radio" name="letra" value="Z" onclick="respuesta()"><h1>z</h1></a></td>
+          </tr>
+      </table>
+
+    </div>
+    <div id="bar">
+      <img src="../img/zombie_instructions2.jpg">
+    </div>
+  </div>
+
+  <audio id="boton" src="../audio/boton_hover.wav"></audio>
+  <audio id="correcta" src="../audio/boton_exito.wav"></audio>
+  <audio id="fail" src="../audio/boton_fail.wav"></audio>
+  <audio id="perdio" src="../audio/scream.ogg"></audio>
+  <audio id="gano" src="../audio/carstart.wav"></audio>
+
+  <script type="text/javascript" src="../Js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../Js/script.js"> </script>
+</body>
+</html>
